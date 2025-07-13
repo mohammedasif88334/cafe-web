@@ -4,26 +4,26 @@
         <title> Cafe Zen</title>
     </head>
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
         body{
             margin: 0;
             padding: 0;
-
         }
         a{
             color:black;
             text-decoration:none;
             font-size:22px;
-            
-            
         }
         a:hover{
             font-size:26px;
-        
-            border: 3px solid #251102;
+            border: 3px solid whitesmoke;
         }
         #header {
             background-color:#7a4f38f9;
-
             width: 100%;
             position: fixed;
             padding: 10px;
@@ -32,41 +32,38 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-       
         }
-        
-        
-
         #pages{
             font-size:39px;
             display:flex;
             align-items: center;
             column-gap: 40px;
             padding:20px;
-    
         }
-         #second{
+        #second{
             background-image: url('cafe.png');
             background-repeat: no-repeat;
             background-size: cover;
-            width: 100%;
+            background-position: center;
+            width: 100vw; 
             height: 800px;
             display: flex;
             align-items: center;
             justify-content: right;
+            padding: 0px;
         }
         #third{
             display:flex;
-             align-items:center ;
-             flex-direction: column;
+            align-items:center;
+            flex-direction: column;
+            width: 100vw;  
         }
-         
         #fourth{
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            width: 100vw;  /* Fixed */
         }
-
         #fifth{
             width: 100%;
             height: 800px;
@@ -79,13 +76,11 @@
             justify-content: center;
             row-gap: 30px;
         }
-
         #fifth-child1{
             background-color: rgba(255, 255, 255, 0.541);
             padding: 15px;
             border-radius: 15px;
         }
-
         #fifth-child2{
             width: 95%;
             border-radius: 15px;
@@ -101,57 +96,53 @@
             background-image: url('coffee-r.jpg');
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size:cover;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         #seventh{
             display:flex;
-             align-items:center ;
-             flex-direction: column;
+            align-items:center;
+            flex-direction: column;
+        }
+        #eight, #nine {
+          display: flex;
+         justify-content: center;  
+            flex-wrap: wrap;          
+             gap: 20px;                
         }
 
-       
+         #eight img, #nine img {
+             width: 100%;
+             max-width: 300px; 
+            height: auto;
+       }
+
         
-        #eight{
-            display: flex;
-            justify-content: space-evenly;
-
-        }
-       #nine{
-            display: flex;
-            justify-content: space-evenly;
-
-        }
-         #footer{
+        #footer{
             color: white;
             width: 100%;
-            height: 200px;
+            height: 150px;
             background-color: black;
             display: flex;
             align-items: center;
-            column-gap: 40px;
+            column-gap: 60px;
             justify-content: space-evenly;
-         }
-        
+            background-size: 100%;
+        }
     </style>
     <body>
         <header>
             <div id="header">
-               
                <div>
                 <img src ="logo-bg.png" width="178">
-                
-   
                 </div>
                 <br>
-                <marquee>
-                 <h1 style="font-size: 26px; background-color: #7a4f38a0;color:whitesmoke; letter-spacing:5px"> Welcome to Cafe Zen       Welcome to Cafe Zen  Welcome to Cafe Zen</h1>
-                    </marquee>
+               <marquee style="font-size:26px; color:white;">
+                | Welcome to Cafe Zen | Welcome to Cafe Zen |  Welcome to Cafe Zen |
+               </marquee>
                 <div id="pages">
-                                
- 
                  <a href= "#"> Home</a>
                  <a href= "#"> Blog</a>
                  <a href= "#"> Portfolio</a>
@@ -163,60 +154,75 @@
                  <img src="menu.png" width="30">                  
                </div>
             </div>
-           
         </header>
         <br> <br> <br> <br> 
-        
         <br> <br><br>
         <br>
-               </div>
         <div id="second">
-             
             <div style="display: flex; align-items: center; flex-direction: column;">
-               
-                <h1 style="color: white; font-size: 70px; letter-spacing: 10px; margin-top:-250px">Coffee Zen</h1>
+                <h1 style="color:white; font-size: 70px; letter-spacing: 10px; margin-top:-275px; padding-right:17px;">Coffee Zen</h1>
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/slider-separator-img.png">
             </div>
         </div>
-         <div id="third">
-        <h1 style="text-align: center; font-size: 50px"> Our Delicious offer</h1>
-         <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png">
-        <p> We offer a wide range of coffee for all type of your moods(Happy,sad,angry)</p>
+        <div id="third">
+            <h1 style="text-align: center; font-size: 50px"> Our Delicious offer</h1>
+            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png">
+            <p> We offer a wide range of coffee for all type of your moods(Happy,sad,angry)</p>
         </div>
         <br><br>
         <div id="fourth">
             <div id="coffee-types" style="display: flex;flex-direction: column; align-items: center; justify-content: center;">
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-5.png">
                 <h1>Types of coffee</h1>
-                <p>We offer a wide range of coffee.</p>
+                <ul>
+                   <li> Espresso </li>
+                   <li>Americano</li> 
+                   <li>Latte</li>
+                   <li>Cappuccino</li>
+                  
+                </ul>
+
             </div>
-              <div id="bean-varities" style="display: flex;flex-direction: column; align-items: center; justify-content: center;">
+            <div id="bean-varities" style="display: flex;flex-direction: column; align-items: center; justify-content: center;">
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png">
                 <h1>Bean Varities</h1>
-                <p>We offer a wide range of coffee.</p>
+                <ul>
+                    <li> Arabica (Coffea arabica)</li>
+                    <li>Robusta (Coffea canephora)</li>
+                    <li>Liberica (Coffea liberica)</li>
+                    <li>Excelsa (Coffea excelsa)</li>
+                </ul>
+               
             </div>
-
             <div id="coffee-pastry" style="display: flex;flex-direction: column; align-items: center; justify-content: center;">
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-7.png">
-                <h1>Coffee & Pastry</h1>
-                <p>We offer a wide range of coffee.</p>
+                <h1> Pastry</h1>
+                <ul>
+                    <li>Doughnut</li>
+                    <li>Muffin</li>
+                    <li>Roll</li>
+                    <li>Biscuit</li>
+                </ul>
             </div>
-
             <div id="coffee-to-go" style="display: flex;flex-direction: column; align-items: center; justify-content: center;">
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-8.png">
                 <h1>Coffee To Go</h1>
-                <p>We offer a wide range of coffee.</p>
+                <ul>
+                    <li>Iced Coffee</li>
+                    <li>Cold Brew</li>
+                    <li>Flat White</li>
+                    <li>Frappuccino</li>
+                </ul>
             </div>
         </div>
-         <br><br><br>
-
+        <br><br><br>
         <div id="fifth">
             <div id="fifth-child1" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <h1>The Coffee Herald</h1>
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <p>Coffee Herald brings you the freshest brews and boldest flavors each day.
+From classic espresso to seasonal specials — your daily coffee news starts here!</p>
             </div>
-
             <div id="fifth-child2">
                 <div id="fifth-child2-child1" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                     <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/blog-1-img-1.jpg" width="300">
@@ -224,14 +230,12 @@
                     <p style="width: 65%; text-align: center;">Quisque rutrum, aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi, nam eget dui. Etiam rhoncus maecenas tempus,</p>
                     <a href="#">-Read More</a>
                 </div>
-
                 <div id="fifth-child2-child2" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                     <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/blog-1-img-2.jpg" width="300">
                     <h1>French Press</h1>
                     <p style="width: 65%; text-align: center;">Quisque rutrum, aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi, nam eget dui. Etiam rhoncus maecenas tempus,</p>
                     <a href="#">-Read More</a>
                 </div>
-
                 <div id="fifth-child2-child3" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                     <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/blog-1-img-3.jpg" width="300">
                     <h1>Turkish Ibrish</h1>
@@ -240,55 +244,44 @@
                 </div>
             </div>
         </div>
-
         <div id="sixth">
             <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-single-img-1-250x226.png">
         </div>
         <div id="seventh">
-           
-               
-                <h1 style="text-align: center; font-size: 50px"> OUR SWEET GALLERY</h1>
-                <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-            <br> <br>
-
+            <h1 style="text-align: center; font-size: 50px"> OUR SWEET GALLERY</h1>
+            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        </div>
+        <br> <br>
         <div id="eight">
-        <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-8.jpg" width="400">
-        <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-5.jpg" width="400">
-        <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-1.jpg" width="400">
-         </div>
-         <br> <br>
-         <div id="nine">
-                    <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-10.jpg" width="400">
-        <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-12.jpg" width="400">
-        <img src="cafe.png" width="400">
-         </div>
-        
+            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-8.jpg" >
+            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-5.jpg" >
+            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-1.jpg" >
+        </div>
+        <br> <br>
+        <div id="nine">
+            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-10.jpg" >
+            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/port-1-gallery-12.jpg" >
+            <img src="cafe.png" width="400">
+        </div>
     </div>
     <footer>
-            <div id="footer">
-                <div>
-                    <p>&copy; All rights reserved</p>
-                </div>
-
-                <div>
-                    <a href="#" style="color: white;">Home</a>
-                    <a href="#" style="color: white;">About</a>
-                    <a href="#" style="color: white;">Shop</a>
-                    <a href="#" style="color: white;">Contact</a>
-                </div>
-
-                <div>
-                    <img src="fb.png" width="30">
-            
-                    <img src="ig.png" width="30">
-                    <img src="x.png" width="30">
-                    
-                </div>
+        <div id="footer">
+            <div>
+                <p>&copy; All rights reserved</p>
             </div>
-        </footer>
-
-            
-    </body>
+            <div id="f2" style="display:flex; text-align:center;column-gap:30px;">
+                <a href="#" style="color: white;">Home</a>
+                <a href="#" style="color: white;">About</a>
+                <a href="#" style="color: white;">Shop</a>
+                <a href="#" style="color: white;">Contact</a>
+            </div>
+            <div style="display:flex; column-gap:15px;">
+                <img src="fb.png" width="30">
+                <img src="ig.png" width="30">
+                <img src="x.png" width="30">
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
